@@ -13,42 +13,83 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text('my first app'),
+        title: Text('The Net Ninja'),
         centerTitle: true,
-        backgroundColor: Colors.red[600],
+        backgroundColor: Colors.grey[850],
+        elevation: 0,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: <Widget>[ 
-          Row(
-            children: <Widget>[
-              Text('Hello, '),
-              Text('World'),
-            ],
-          ),
-          Container(
-            padding: EdgeInsets.all(20.0),
-            color: Colors.cyan,
-            child: Text('one'),
-          ),
-           Container(
-            padding: EdgeInsets.all(30.0),
-            color: Colors.pinkAccent,
-            child: Text('two'),
-          ),
-           Container(
-            padding: EdgeInsets.all(40.0),
-            color: Colors.amber,
-            child: Text('three'),
-          )
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Text('click'),
-        backgroundColor: Colors.red[600],
-        onPressed: () {},
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/thumb.jpg'),
+                radius: 40.0,
+              ),
+            ),
+            Divider(
+              height: 60.0,
+              color: Colors.grey[800],
+            ),
+            Text(
+              'NAME',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2,
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Text(
+              'Chun-Li',
+              style: TextStyle(
+                color: Colors.amberAccent[200],
+                letterSpacing: 2,
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 30.0),
+            Text(
+              'CURRENT NINJA LEVEL',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2,
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Text(
+              '8',
+              style: TextStyle(
+                color: Colors.amberAccent[200],
+                letterSpacing: 2,
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 30.0),
+            Row(
+              children: <Widget>[
+                Icon(
+                  Icons.email, 
+                  color: Colors.grey[400]
+                ),
+                SizedBox(width: 10.0),
+                Text(
+                  'chon.li@thenetninja.co.uk',
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    fontSize: 18.0,
+                    letterSpacing: 1.0,
+                  )
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
