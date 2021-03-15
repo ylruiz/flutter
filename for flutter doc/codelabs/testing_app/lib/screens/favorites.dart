@@ -44,7 +44,7 @@ class FavoriteItemTile extends StatelessWidget {
             Provider.of<Favorites>(context, listen: false).delete(itemNo);
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text('Deleted from favorites'),
+                content: Text('Deleted from favorites.'),
                 duration: Duration(seconds: 1),
               ),
             );

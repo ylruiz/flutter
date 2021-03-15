@@ -64,7 +64,7 @@ class ItemTile extends StatelessWidget {
               SnackBar(
                 content: Text(favoritesList.items.contains(itemNo)
                     ? 'Added to favorites.'
-                    : 'Deleted from favorites'),
+                    : 'Deleted from favorites.'),
                 duration: Duration(seconds: 1),
               ),
             );
